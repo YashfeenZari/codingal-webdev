@@ -1,0 +1,36 @@
+<html>
+     <head>
+          <title>JavaScript Math Object Methods</title>
+     </head>
+     <body>
+          <script type="text/javascript">
+               // Store a random decimal number (0 to 1) in a variable
+               var xy = Math.random();
+                // Print the values
+                document.write("Random Number (0 to 1): " + xy + "<br>");
+
+               // Store a random whole number (0 to 10) in a variable
+               // .floor() method is used to round the number to the nearest whole number
+                var ab=Math.random()*11 ;
+               // bcz we want to go till 10 hence multiply by 11 bcz last no. is not inculded
+                var randomWholeNumber = Math.floor(ab);
+
+
+                document.write("Random Whole Number (0 to 10): " + randomWholeNumber + "<br>");
+
+               //for games: random no 1-6 
+                    var takeno = Math.random()*6 ; // 0 to 5
+
+               //0 to 5 and add 1 as we need 1-6 
+                var diceRoll = Math.floor(takeno) + 1;
+                document.write("<br>");
+               
+                document.write("Next person gets -"+ "<br>");
+               
+                document.write("🎲 Dice Roll: " + diceRoll + "<br>");
+
+
+
+          </script>
+     </body>
+</html>

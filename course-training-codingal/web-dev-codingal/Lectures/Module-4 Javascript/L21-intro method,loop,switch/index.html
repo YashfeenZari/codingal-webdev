@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript String Methods</h2>
+    <p>Basic Methods</p>
+    <script>
+      var str = "AmAzInG";
+      document.write(str.toUpperCase());
+      document.write("<br>");
+      document.write(str.toLowerCase());
+      document.write("<br>");+
+
+      // true or false  -- check if it starts with "this letter"
+      document.write(str.startsWith('i'));
+      document.write(str.startsWith('A'));
+      document.write("<br>");
+        
+        // Test Method -> returns true or false .test()
+        // check if this word  exists or not
+        var str1 = "I learnt about Methods";
+        // create regular expression = "the one u want to check"
+        var patt = new RegExp("about");
+
+
+        var result1 = patt.test(str);
+
+
+      var result2 = patt.test(str1);
+        document.write(result1); 
+
+
+      document.write("<br>")
+      document.write(result2);
+    </script>
+  </body>
+</html>

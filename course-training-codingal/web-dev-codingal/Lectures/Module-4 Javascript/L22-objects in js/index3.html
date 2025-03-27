@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <p>creating LUCKY DRAW game using - Arguments object   </p>
+    <p id="result"></p>
+    <script>
+      // argument objects--
+      // What is the arguments object?
+// 1-It's a special object available in all functions in JavaScript.
+// 2-to get the length of arguments -- argument.length -- is used 
+// 3-It stores all the values (arguments) passed to a function.
+// 4-It behaves like an array, but it's not actually an array (no .push(), .pop(), etc.).
+// 5-It allows functions to accept any number of arguments without defining them in ().
+
+      function luckyDraw() {
+          document.write("🎉 Participants: ");
+
+          for (var i = 0; i < arguments.length; i++) { // Loop through all names
+              document.write(arguments[i] +","+ " "); // Display each participant
+          }
+
+
+        // AND THE WINNER IS ---
+
+          var randomIndex = Math.floor(Math.random() * arguments.length); // Pick a random index
+          document.write("<br>🏆 Winner: " + arguments[randomIndex]); // Show the winner
+      }
+
+      // Call the function with different names
+      // luckyDraw("Alice", "Bob", "Charlie", "David", "Emma");
+      luckyDraw("nahzat","zarif","vonal");
+
+
+
+    </script>
+
+  </body>
+</html>

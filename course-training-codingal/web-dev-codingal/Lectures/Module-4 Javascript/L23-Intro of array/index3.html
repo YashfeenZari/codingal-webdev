@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Pick a Random Fruit! 🍉🍍🍓</h2>
+
+<p>Click the button to get a random fruit:</p>
+<button onclick="pickFruit()">Get a Fruit</button>
+
+<p id="result"></p>
+
+<script>
+    // Array of fruits
+    var fruits = ["Apple 🍎", "Banana 🍌", "Grapes 🍇", "Mango 🥭", "Pineapple 🍍", "Strawberry 🍓"];
+
+    // function -
+    function pickFruit() {
+        // Get the length of the array
+        var n = fruits.length;
+
+        // Generate a random index
+        var randomIndex = Math.floor(Math.random() * n);
+
+        // Display the random fruit
+        document.getElementById("result").innerHTML = "You got: " + fruits[randomIndex];
+    }
+</script>
+
+</body>
+</html>

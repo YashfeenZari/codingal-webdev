@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>A function can access variables defined inside the function:</p>
+    <button type="button" onclick="myFunction()">Click Me!</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+       
+      var b = 5;
+      function myFunction() {
+        var a = 4;
+        document.getElementById("demo").innerHTML = b * a;
+      } 
+      document.getElementById("demo2").innerHTML = b; 
+      document.getElementById("demo1").innerHTML = a; 
+      //above statment prints nothing  this is bcz a is not accessable outside the function as it is declared in side 
+      
+    </script>
+    
+  </body>
+</html>

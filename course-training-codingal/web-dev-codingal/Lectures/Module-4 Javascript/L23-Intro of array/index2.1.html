@@ -1,0 +1,39 @@
+<!-- //how to make pop push fun  -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>🍇 Fruit Basket Challenge 🍉</h2>
+<p>Click the buttons to modify the fruit basket!</p>
+
+<p><b>Current Basket:</b> <span id="basket"></span></p>
+
+<button onclick="showBasket()">Show Basket</button>
+<button onclick="removeFruit()">Remove Last Fruit</button>
+<button onclick="addFruit()">Add Your Fruit</button>
+
+<p><b>Updated Basket:</b> <span id="updatedBasket"></span></p>
+
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    function showBasket() {
+        document.getElementById("basket").innerHTML = fruits.join(" - ");
+    }
+
+    function removeFruit() {
+        fruits.pop();
+        document.getElementById("updatedBasket").innerHTML = fruits.join(" - ");
+    }
+
+    function addFruit() {
+        var newFruit = prompt("Enter a fruit name:");
+        if (newFruit) {
+            fruits.push(newFruit);
+            document.getElementById("updatedBasket").innerHTML = fruits.join(" - ");
+        }
+    }
+</script>
+
+</body>
+</html>
