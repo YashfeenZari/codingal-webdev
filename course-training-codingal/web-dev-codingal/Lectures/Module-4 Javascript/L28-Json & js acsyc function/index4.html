@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Callbacks</h2>
+    <p>Do a calculation and then display the result.</p>
+    <p id="result"></p>
+    <script>
+      function myDisplayer(value) {
+        // used to print the thing oin the para
+        document.getElementById("result").innerHTML = value;
+      }
+   /*   function someNewCalculation(x){
+     //eg .  =  x*10
+      }
+     */
+      function myCalculator(num1, num2, myCallback) {
+        let sum = num1 + num2;
+        myCallback(sum);
+      }
+        // myCallback=MyDisplayer
+      myCalculator(5, 5,myDisplayer);
+      //whats the use of mycallback if we can use mydisplayer directly too--so use is it makes it felxible 
+    //   myCalculator(5, 5,someNewCalculation);
+    </script>
+  </body>
+</html>
