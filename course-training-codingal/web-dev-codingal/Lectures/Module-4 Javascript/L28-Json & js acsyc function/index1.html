@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Convert a JavaScript object into a JSON string, and send it to the server.</h2>
+    <p id="text"></p>
+    <p id="result"></p>
+    <script>
+      var myObj = { name: "Riya", 
+                   age: 12, 
+                   grade: 7
+                  };
+      var myJSON = JSON.stringify(myObj); // converts object to JSON for sending data
+      var newObj = JSON.parse(myJSON); // converts JSON into object while receiving data 
+      document.getElementById("text").innerHTML = myJSON;
+      document.getElementById("result").innerHTML = newObj.age;
+/*
+Json is a text format laungaue - 
+server excepts text format
+browser gives js object 
+
+so -- 
+while sending- js Object is coverted to text using json and send to server --name- .stringify(object)
+then while receiving - text send by server is converted to js object --name - .parse(text)
+*/
+    </script>
+  </body>
+</html>
