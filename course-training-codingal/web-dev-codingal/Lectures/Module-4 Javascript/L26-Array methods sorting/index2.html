@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Multiply every element in the array with 10:</p>
+    <p id="product_value"></p>
+    <p id="product_value2"></p>
+
+    <script>
+      var numbers = [28, 6, 19, 95];
+      
+      function myFunction(num) {
+        return num * 10;
+      }
+
+      function myFunction2(num) {
+        return num * 100;
+      }
+      
+      var newarray = numbers.map(myFunction);
+      var newarray2 = numbers.map(myFunction2);
+
+      document.getElementById("product_value").innerHTML = newarray;
+      document.getElementById("product_value2").innerHTML = newarray2;
+
+    </script>
+  </body>
+</html>
+
+<!-- 📦 Real-life Example to Tell Students:
+You have a box of apples 🍎, and you want to wrap each apple in gift paper 🎁 and keep them in a new box.
+.map() = you pick each apple, wrap it, and place it into a new box.
+Original apples remain untouched! -->

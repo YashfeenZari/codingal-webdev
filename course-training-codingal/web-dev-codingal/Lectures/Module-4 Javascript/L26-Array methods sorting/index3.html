@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Click the button to evaluate/execute JavaScript code/expressions.</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="result"></p>
+    <script>
+      function myFunction() {
+        var x = 10;
+        var y = 20;
+
+        // syntax: eval(string)
+        var a = eval("x + y") + "<br>";
+        var b = eval("2 * 2") + "<br>";
+        var c = eval("y - x") + "<br>";
+
+        var res = a + b + c; //concatenates the string
+        document.getElementById("result").innerHTML = res;
+      }
+    </script>
+  </body>
+</html>
+
+
+<!-- why eval why can'y we direclty write an perform  -->
+<!-- 📦 Real-Life Use Case:
+Let’s say a student writes into an input box:
+
+
+<input id="input" value="5 * 10 + 2">
+And you want to calculate the answer when they click a button.
+
+With eval():
+
+var expression = document.getElementById("input").value;
+var answer = eval(expression); // evaluates the typed math
+✔️ Now you made a calculator from just one line! -->
+
+<!-- eval() is dynamic as it takes the string expression  -->
